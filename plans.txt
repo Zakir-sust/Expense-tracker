@@ -1,16 +1,27 @@
-
+feature:
+1/ insert date google calender option
+2/ insert item
+3/ delete item 
+4/ for each item-type query 
+5/ custom query     (itemname,date_range)       ---pritom      
+6/ full query descending
 
 
 db:
+1/ item:
+    date,item_name,description,cost,user_id
 
-
-
+2/ user:   --- pritom
+    username,password,email
 
 
 
 routes:
-
-
-
+    item route:
+        post request for item       
+        get full
+        get particular item
+        get custom
+        delete item
 
 
