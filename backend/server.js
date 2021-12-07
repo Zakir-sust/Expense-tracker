@@ -1,12 +1,9 @@
-// const express = require('express');
-// const cors = require('cors');
-// const mongoose = require('mongoose');
-// require('dotenv').config();
 import itemRoute from "./api/route.js"
 import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
 import dotenv from 'dotenv'
+import userRouter from './api/user.js'
 dotenv.config()
 
 const app = express();
@@ -16,8 +13,6 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.ATLAS_URI;
-// const uri = "mongodb+srv://samba:ROOT@cluster0.atu6p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 const connection = mongoose.connection;
 connection.once('open', () => {
@@ -25,6 +20,7 @@ connection.once('open', () => {
 })
 
 app.use('/api/expense-tracker',itemRoute)
+app.use('/users', userRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port : ${port}`);
