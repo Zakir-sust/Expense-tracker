@@ -7,7 +7,7 @@ const itemSchema = new Schema({
         required:true
     },
     date:{
-        type:String,
+        type:Date,
         required:true
     },
     description:{
@@ -15,7 +15,7 @@ const itemSchema = new Schema({
         required:true
     },
     cost:{
-        type:String,
+        type:Number,
         required:true
     },
     user_id:{
