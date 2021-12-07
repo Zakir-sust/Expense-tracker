@@ -1,13 +1,16 @@
 import itemModel from '../db/item.js'
 
 
-class RouteCtrl{
-    static async apiAdduser(req,res){
+export default class RouteCtrl{
+    static async apiAddUser(req,res){
 
     }
+    static async apiGetUser(req,res){
 
-    static async apiPostUser(req,res){
-
+    }
+    
+    static async apiGetItem(req,res){
+        
     }
 
     static async apiAddItem(req,res){
@@ -23,4 +26,3 @@ class RouteCtrl{
     }
 }
 
-export default RouteCtrl
