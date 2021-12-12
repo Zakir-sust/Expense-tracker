@@ -10,12 +10,12 @@ import Recordlist from './components/Recordlist'
 import Signupform from './components/Signupform'
 import Querylist from './components/Querylist'
 import Queryform from './components/Queryform'
-
+import './App.css'
 function App() {
   
   return (
-    <Router>
     <div className="App">
+    <Router>
       <Header/>
         <Route
           exact
@@ -58,8 +58,8 @@ function App() {
           path="/querylist" component={Querylist} 
         />
 
-    </div>
     </Router>
+    </div>
   );
 }
 

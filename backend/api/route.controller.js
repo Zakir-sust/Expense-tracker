@@ -11,7 +11,8 @@ export default class RouteCtrl{
     
     ///date in descending order
     static async apiGetItem(req,res){
-        ItemModel.find({}).sort({date:-1})
+        console.log('id = ',req.query.id)
+        ItemModel.find({user_id:req.query.id}).sort({date:-1})
         .then((data)=>{
             console.log('res = ',data)
             res.send(data)
@@ -56,6 +57,7 @@ export default class RouteCtrl{
         })
     }
 
+    ///given name of item,returns only list of that item in desc order
     static async apiGetOneItem(req,res){
         console.log('name ',req.query.name)
         ItemModel.find({name:req.query.name}).sort({date:-1})

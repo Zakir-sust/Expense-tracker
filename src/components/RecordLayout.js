@@ -4,7 +4,7 @@ import axios from 'axios'
 import './RecordLayout.css'
 const RecordLayout = ({id,name,description,cost}) => {
     const delet = () => {
-        axios.delete(`http://localhost:5000/api/expense-tracker/${id}`)
+        axios.delete(`http://localhost:5000/api/expense-tracker/?id=${id}`)
        .then(res => {
         console.log(res.data) 
         window.location.href='/home'
@@ -12,7 +12,7 @@ const RecordLayout = ({id,name,description,cost}) => {
     }
     return (
         <div className = 'item'>
-            <p><strong>Reasone:</strong> {name}</p>
+            <p><strong>Reason:</strong> {name}</p>
             <p><strong>Short description:</strong> {description}</p>
             <p><strong>Cost:</strong> {cost} taka</p>
             <FaTimes className = 'cross'

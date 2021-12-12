@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Loginform from './Loginform'
 import Recordlist from './Recordlist'
-
+import './Home.css'
 const Home = () => {
     const [use, setUse] = useState('')
     console.log(localStorage.getItem('token'))
@@ -38,9 +38,9 @@ const Home = () => {
         }else{
 
             return(
-               <div>
+               <div className = 'home-wrapper'>
+                   <Link to='/addrecord' className = 'add-record-link'>Add New Record</Link>
                    <Recordlist useid={ath} />
-                   <Link to='/addrecord'>Add Trading</Link>
                </div>
             )
         }

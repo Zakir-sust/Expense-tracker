@@ -25,3 +25,20 @@ routes:
         delete item
 
 
+
+Front-end:
+- home page
+    top - home e jawar option
+    login signup
+- after login
+    navigation bar 
+       - query ,logout
+    list of items descending order
+    insert a new item
+    last 1 month,3 month khoroch
+- query
+    custom query
+        form thakbe.argument:2 date,product name
+        item name
+
+

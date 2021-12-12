@@ -6,48 +6,26 @@ const Queryform = () => {
     const [endDate, setEndDate] = useState('')
     const [product, setProduct] = useState('')
     return (
-        <div>
-            <form className='signup'>
-             <div className='form-control'>
-                <label>Start Date</label> {' '} {' '} {' '}
+        <div className = 'form-wrapper'>
+            <form className='form'>             
                 <input
-
                   type='Date'
                   placeholder='Enter Start Date'
                   value={startDate}
                   onChange={(e)=>setStartDate(e.target.value)}
-
                 ></input>
-             </div>
-             <br></br>
-
-             <div className='form-control'>
-                <label>Set End Date</label> {' '}
                 <input
-
                   type='Date'
                   placeholder='Enter End Date'
                   value={endDate}
                   onChange={(e)=>setEndDate(e.target.value)}
-
                 ></input>
-             </div>
-
-             <br></br>
-
-             <div className='form-control'>
-                <label>Product</label> {' '}
                 <input
-
                   type='text'
                   placeholder='Enter Product'
                   value={product}
                   onChange={(e)=>setProduct(e.target.value)}
-
                 ></input>
-             </div>
-             <br></br>
-
              <Link to={{
                      pathname: '/querylist',
                      state:{
@@ -57,7 +35,7 @@ const Queryform = () => {
                      }
 
                     }}
-                ><input type='submit' value='submit'/></Link>
+                ><button type='submit' value='submit'> Submit</button></Link>
         </form>
         </div>
     )

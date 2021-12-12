@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
-
-
+import './Addreordform.css'
 const Addreordform = () => {
     const [name, setName] = useState('')
     const [date, setDate] = useState('')
@@ -15,17 +14,17 @@ const Addreordform = () => {
           }
     })
     .then(res => {
-        console.log('present user exists');
+        // console.log('present user exists');
         console.log(res.data) ;
         setUse(res.data._id);
-        console.log('here is out present user ath who will be used here and hid id is '+res.data+' '+res.data.user+' '+res.data._id)
+        // console.log('here is out present user ath who will be used here and hid id is '+res.data+' '+res.data.user+' '+res.data._id)
         console.log(use)
     })
     .catch(error => {
         console.log('no one logged in')
     })
     const ath=use;
-    console.log('here is out present user ath who will be used here and hid id is '+ath)
+    // console.log('here is out present user ath who will be used here and hid id is '+ath)
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -80,37 +79,23 @@ const Addreordform = () => {
         
     }
     return (
-        <div>
-            <form className='signup' onSubmit={onSubmit} >
-             <div className='form-control'>
-                <label>Name</label> {' '} {' '} {' '}
+        <div className = 'form-wrapper'>
+            <form className = 'form' onSubmit={onSubmit} >
                 <input
-
                   type='text'
                   placeholder='Enter Name'
                   value={name}
                   onChange={(e)=>setName(e.target.value)}
-
-                ></input>
-             </div>
-             <br></br>
-
-             <div className='form-control'>
-                <label>Date</label> {' '}
+                >
+                </input>
+            
                 <input
-
                   type='Date'
                   placeholder='Enter Date'
                   value={date}
                   onChange={(e)=>setDate(e.target.value)}
 
                 ></input>
-             </div>
-
-             <br></br>
-
-             <div className='form-control'>
-                <label>Description</label> {' '}
                 <input
 
                   type='text'
@@ -119,23 +104,14 @@ const Addreordform = () => {
                   onChange={(e)=>setDescription(e.target.value)}
 
                 ></input>
-             </div>
-             <br></br>
-
-             <div className='form-control'>
-                <label>Cost</label> {' '}
                 <input
-
                   type='text'
                   placeholder='Enter Cost'
                   value={cost}
                   onChange={(e)=>setCost(e.target.value)}
 
                 ></input>
-             </div>
-             <br></br>
-
-             <input type='submit' value='submit'/>
+             <button className = 'btn' type='submit' value='submit'>Submit</button>
         </form>
         </div>
     )

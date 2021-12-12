@@ -6,12 +6,27 @@ import './Recordlist.css'
 const Recordlist = ({useid}) => {
     const [items,setItems] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/expense-tracker/item?id={useid}`)
+        axios.get(`http://localhost:5000/api/expense-tracker/item?id=${useid}`)
         .then(res => {
             console.log(res.data) 
             setItems(res.data)
        }) ;
     },[])
+    const getMinDate = ()=>{
+        let minDate = new Date()
+        for(let item of items){
+            let date = new Date(item.date)
+            if(minDate.valueOf()>date.valueOf())minDate = date
+        }
+        return minDate
+    }
+    const allRes = ()=>{
+        let allCost = 0
+        for(let item of items){
+            allCost+=item.cost
+        }
+        return allCost
+    }
     const getOneMonth = ()=>{
         let today = new Date()
         let thisMonth = today.getMonth()
@@ -20,7 +35,7 @@ const Recordlist = ({useid}) => {
             let date = new Date(item.date)
             if(date.getMonth() === thisMonth)
             {
-                console.log('cost added for date: ',item)
+                // console.log('cost added for date: ',item)
                 res+=item.cost;
             }
         }
@@ -30,14 +45,13 @@ const Recordlist = ({useid}) => {
     localStorage.setItem('dt', d);
     const ath=useid
     return (
-        <div>
-            <p>Cost for last month: {getOneMonth()}</p>
-            <div className="optionmenu">
+        <div className = 'record-list'>
+            <p> Cost for this month: {getOneMonth()} taka</p>
+            <p> Cost from {getMinDate().toLocaleDateString()} is {allRes()} taka</p>
+            <div>
                 
                 {
                    items.map(item => (
-                       
-
                        (ath==item.user_id)?
                         <div key={item._id}>
                         <Dateprinter date={item.date}/>

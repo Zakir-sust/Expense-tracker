@@ -8,7 +8,7 @@ const Querylist = (props) => {
     const [items,setItems] = useState([])
     const [use, setUse] = useState('')
     const det=props.location.state;
-    if(det.product=='') det.product=null;
+    if(det.product==='') det.product=null;
 
     console.log('WE ARE GOING TO TEST FILTERING')
     console.log(det.startDate+' '+det.endDate+' '+det.product)
@@ -21,9 +21,9 @@ const Querylist = (props) => {
         }
         
         datamodify(startDate, endDate) {
-            if(startDate=='') startDate=new Date('1970-1-1');
+            if(startDate ==='') startDate=new Date('1970-1-1');
             else startDate = new Date(startDate);
-            if(endDate=='') endDate=new Date('2222-1-1');
+            if(endDate ==='') endDate=new Date('2222-1-1');
             else endDate = new Date(endDate);
             console.log(startDate+' HERE WE ARE PRINTING DATE INTERVAL FOR TEST '+endDate)
             
@@ -126,7 +126,7 @@ const Querylist = (props) => {
         })
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/expense-tracker/item')
+        axios.get(`http://localhost:5000/api/expense-tracker/item?id=${use}`)
         .then(res => {
             console.log('GOT THE WHOLE LIST OF DATA')
             console.log(res.data) 
@@ -144,24 +144,18 @@ const Querylist = (props) => {
     return (
         <div>
             <div className="optionmenu">
-                <ul>
+                
                 {
                    items.map(item => (
-                       
-
                        (ath==item.user_id)?
-                       
-                        <li key={item._id}>
-                            
-                            
+                        <div key={item._id}>
                         <Dateprinter date={item.date}/>
-
                         <RecordLayout id={item._id} name={item.name} description={item.description} cost={item.cost} />
-                        </li>
+                        </div>
                         :''
                    ))
                 }
-                </ul>
+                
             </div>
         </div>
     )
