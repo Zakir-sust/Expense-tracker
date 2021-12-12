@@ -21,8 +21,10 @@ const Querylist = (props) => {
         }
         
         datamodify(startDate, endDate) {
-            startDate = new Date(startDate);
-            endDate = new Date(endDate);
+            if(startDate=='') startDate=new Date('1970-1-1');
+            else startDate = new Date(startDate);
+            if(endDate=='') endDate=new Date('2222-1-1');
+            else endDate = new Date(endDate);
             console.log(startDate+' HERE WE ARE PRINTING DATE INTERVAL FOR TEST '+endDate)
             
             let ar = [];
@@ -71,7 +73,9 @@ const Querylist = (props) => {
             let i = 0;
             let data = this.data;
             if (prod != null) {
-                startDate = new Date(startDate);
+                if(startDate=='') startDate=new Date('1970-1-1');
+                else startDate = new Date(startDate);
+                if(endDate=='') endDate=new Date('2222-1-1');
                 endDate = new Date(endDate);
                 console.log(startDate+' start end '+endDate);
                 while (i < data.length) {
@@ -79,7 +83,7 @@ const Querylist = (props) => {
                     let dat=new Date(ddd.date);
                     console.log(dat);
                     console.log('Ms of date '+dat.valueOf())
-                    console.log(data[i])
+                    /*console.log(data[i])
                     console.log(dat+' '+dat.valueOf() +' COMPARING DATESs '+startDate+' '+startDate.valueOf())
 
                     if(dat.valueOf() >= startDate.valueOf()) console.log('SATISFIED');
@@ -92,7 +96,7 @@ const Querylist = (props) => {
 
                     console.log(prod+' product checking '+data[i].product);
                     if(prod == data[i].name) console.log('SATISFIED')
-                    else console.log('UNSATISFIED')
+                    else console.log('UNSATISFIED')*/
                     if (dat.valueOf() >= startDate.valueOf() && dat.valueOf() <= endDate.valueOf()) {
                             if (prod == data[i].name) ar.push(data[i]);
                     }
