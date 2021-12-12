@@ -42,23 +42,21 @@ const Header = () => {
     const RenderMenu = () => {
         if(use===''){
             return(
-           <div className="navigationbar">
-           <div className='menu'>
-               <ul>
-                   <li><Link to='/' ><span>Expense-tracking</span></Link></li>
-               </ul>
+           <nav>
+           <div className = 'nav-list'>
+               <span><Link to='/' >Expense-tracking</Link> </span>
            </div>
-           </div>
+           </nav>
             )
         }else{
             return(
-           <nav className="navigationbar">
+           <nav >
           
-               <ul className = 'nav-list'>
+               <div className = 'nav-list'>
                    <span><Link to='/' >Expense-tracking</Link></span>
                    <span><Link to='/queryform' >Filter</Link></span>
                      <span onClick={logoutClick}>Logout</span>
-               </ul>
+               </div>
            
            </nav>
             )

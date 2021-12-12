@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useContext } from 'react'
 import axios from 'axios'
-
+import './Loginform.css'
 const Loginform = () => {
     const [user, setUser] = useState('')
     const [password, setPass] = useState('')
@@ -43,8 +43,8 @@ const Loginform = () => {
         
     }
     return (
-        <div>
-            <h2>Login Form</h2>
+        <div className = 'form-wrapper'>
+            <p className = 'login-header'>Login Form</p>
             <form  className = 'form' onSubmit={onSubmit}>
 
                 <div>

@@ -69,11 +69,9 @@ const Signupform = () => {
 
 
     return (
-        <div>
-            <form className='signup' onSubmit={onSubmit} >
-             <div className='form-control'>
-                <label>Username</label> {' '} {' '} {' '}
-                <input
+        <div className = 'form-wrapper'>
+            <form className='form' onSubmit={onSubmit} >
+              <input
 
                   type='text'
                   placeholder='Enter Username'
@@ -81,11 +79,7 @@ const Signupform = () => {
                   onChange={(e)=>setUser(e.target.value)}
 
                 ></input>
-             </div>
-             <br></br>
-
-             <div className='form-control'>
-                <label>Email</label> {' '}
+             
                 <input
 
                   type='text'
@@ -94,12 +88,6 @@ const Signupform = () => {
                   onChange={(e)=>setMail(e.target.value)}
 
                 ></input>
-             </div>
-
-             <br></br>
-
-             <div className='form-control'>
-                <label>Password</label> {' '}
                 <input
 
                   type='text'
@@ -108,11 +96,6 @@ const Signupform = () => {
                   onChange={(e)=>setPass(e.target.value)}
 
                 ></input>
-             </div>
-             <br></br>
-
-             <div className='form-control'>
-                <label>Repeat Password</label> {' '}
                 <input
 
                   type='text'
@@ -121,10 +104,7 @@ const Signupform = () => {
                   onChange={(e)=>setPassr(e.target.value)}
 
                 ></input>
-             </div>
-             <br></br>
-
-             <input type='submit' value='sign up' className='registerbtn' />
+             <button type='submit' value='sign up'>Submit </button>
         </form>
         </div>
     )

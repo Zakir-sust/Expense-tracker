@@ -31,9 +31,9 @@ const Home = () => {
             return(
            <div>
                <Loginform/>
-               <h3>
-                   don't have and account?<Link to='signup'>Sign up</Link>
-               </h3>
+               <p className = 'dont'>
+                   don't have and account? <Link to='signup' className = 'signup-top'>Sign up</Link>
+               </p>
            </div>
             )
         }else{
