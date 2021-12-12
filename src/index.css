@@ -68,3 +68,11 @@ button:hover{
   cursor:pointer;
 }
 
+.total-cost{
+  display: block;
+  padding:8px 16px;
+  margin-left:100px;
+  color:rgb(118, 36, 185);
+  font-size:larger;
+  font-weight: 700;
+}

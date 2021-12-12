@@ -45,10 +45,9 @@ const Loginform = () => {
     return (
         <div>
             <h2>Login Form</h2>
-            <form onSubmit={onSubmit}>
+            <form  className = 'form' onSubmit={onSubmit}>
 
                 <div>
-                <label>Username</label> {' '}
                 <input
                    type='text'
                    placeholder='Enter Username'
@@ -56,21 +55,15 @@ const Loginform = () => {
                    onChange={(e) => setUser(e.target.value)}
                 />
                 </div>
-                <br></br>
-
                 <div >
-                <label>Password</label> {' '}
                 <input
-                   type='text'
+                   type='password'
                    placeholder='Enter Password'
                    value={password}
                    onChange={(e) => setPass(e.target.value)}
                 />
-                </div>
-
-                <br></br>
-
-                <input type='submit' value='login' />
+                </div>  
+                <button type='submit' value='login'>Button</button>
             </form>
         </div>
     )

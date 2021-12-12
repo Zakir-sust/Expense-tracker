@@ -17,6 +17,7 @@ const Home = () => {
         console.log('present user exists');
         console.log(res.data) ;
         setUse(res.data._id);
+        localStorage.setItem('id',res.data._id)
         console.log(use)
     })
     .catch(error => {

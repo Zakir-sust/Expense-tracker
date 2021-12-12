@@ -12,18 +12,20 @@ const Recordlist = ({useid}) => {
             setItems(res.data)
        }) ;
     },[])
-    const getMinDate = ()=>{
-        let minDate = new Date()
-        for(let item of items){
-            let date = new Date(item.date)
-            if(minDate.valueOf()>date.valueOf())minDate = date
-        }
-        return minDate
-    }
     const allRes = ()=>{
+        let today = new Date()
+        const m = today.getMonth()
+        if(m >2)today.setMonth(m-3)
+        else{
+            today.setMonth(m-3+12)
+            today.setFullYear(today.getFullYear()-1)
+        }
+
         let allCost = 0
         for(let item of items){
-            allCost+=item.cost
+            let date = new Date(item.date)
+            if(date.valueOf() >= today.valueOf())
+                allCost+=item.cost
         }
         return allCost
     }
@@ -46,8 +48,8 @@ const Recordlist = ({useid}) => {
     const ath=useid
     return (
         <div className = 'record-list'>
-            <p> Cost for this month: {getOneMonth()} taka</p>
-            <p> Cost from {getMinDate().toLocaleDateString()} is {allRes()} taka</p>
+            <p className = 'total-cost'> Cost for this month: {getOneMonth()} taka</p>
+            <p className = 'total-cost'> Cost for last 3 months is {allRes()} taka</p>
             <div>
                 
                 {

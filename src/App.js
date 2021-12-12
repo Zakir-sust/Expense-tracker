@@ -10,6 +10,7 @@ import Recordlist from './components/Recordlist'
 import Signupform from './components/Signupform'
 import Querylist from './components/Querylist'
 import Queryform from './components/Queryform'
+import TempQuerylist from './components/TempQueryList.js'
 import './App.css'
 function App() {
   
@@ -55,7 +56,7 @@ function App() {
           path="/queryform" component={Queryform} 
         />
         <Route
-          path="/querylist" component={Querylist} 
+          path="/querylist" component={TempQuerylist} 
         />
 
     </Router>
