@@ -39,8 +39,8 @@ const Home = () => {
 
             return(
                <div>
-                   <Link to='/addrecord'>Add Trading</Link>
                    <Recordlist useid={ath} />
+                   <Link to='/addrecord'>Add Trading</Link>
                </div>
             )
         }

@@ -22,7 +22,7 @@ const Dateprinter = ({date}) => {
             console.log('YES HERE WE HAVE TO PRINT DATE')
             localStorage.setItem('dt',date)
             return (
-                <div>{formattedDate}</div>
+                <div className = 'date'> <strong>Date:</strong> {formattedDate}</div>
             )
         }
         else 

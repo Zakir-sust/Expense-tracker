@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 import axios from 'axios'
-
+import './RecordLayout.css'
 const RecordLayout = ({id,name,description,cost}) => {
     const delet = () => {
         axios.delete(`http://localhost:5000/api/expense-tracker/${id}`)
@@ -11,16 +11,15 @@ const RecordLayout = ({id,name,description,cost}) => {
        }) ;
     }
     return (
-        <div>
-            {name}
-            <FaTimes
+        <div className = 'item'>
+            <p><strong>Reasone:</strong> {name}</p>
+            <p><strong>Short description:</strong> {description}</p>
+            <p><strong>Cost:</strong> {cost} taka</p>
+            <FaTimes className = 'cross'
                 style={{ color: 'red', cursor: 'pointer' }}
                 onClick={delet}
                 />
-            <br></br>
-            {description}<br></br>
-            {cost}<br></br>
-            <br></br>
+            
         </div>
     )
 }

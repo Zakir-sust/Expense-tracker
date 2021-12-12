@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
-
+import './Header.css'
 const Header = () => {
     const [use, setUse] = useState('')
 
@@ -45,22 +45,22 @@ const Header = () => {
            <div className="navigationbar">
            <div className='menu'>
                <ul>
-                   <li><Link to='/' style={{ textDecoration: 'none' } }><span>Expense-tracking</span></Link></li>
+                   <li><Link to='/' ><span>Expense-tracking</span></Link></li>
                </ul>
            </div>
            </div>
             )
         }else{
             return(
-           <div className="navigationbar">
-           <div className='menu'>
-               <ul>
-                   <li><Link to='/' style={{ textDecoration: 'none' } }><span>Expense-tracking</span></Link></li>
-                   <li><Link to='/queryform' style={{ textDecoration: 'none' }}><span>Filter</span></Link></li>
-                   <li onClick={logoutClick} style={{ textDecoration: 'none' }}><span>Logout</span></li>
+           <nav className="navigationbar">
+          
+               <ul className = 'nav-list'>
+                   <span><Link to='/' >Expense-tracking</Link></span>
+                   <span><Link to='/queryform' >Filter</Link></span>
+                     <span onClick={logoutClick}>Logout</span>
                </ul>
-           </div>
-           </div>
+           
+           </nav>
             )
         }
    }

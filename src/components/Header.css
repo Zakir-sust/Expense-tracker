@@ -1,0 +1,15 @@
+.nav-list{
+    display:flex;
+    /* justify-content: space-around; */
+    background-color: blue;
+    justify-content: left;
+}
+nav span{
+    padding:30px;
+    background-color: blue;
+    /* margin:0px 20px; */
+    /* background-color : yellow; */
+}
+nav span:hover{
+    background-color: aqua;
+}

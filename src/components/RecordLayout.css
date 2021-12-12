@@ -1,0 +1,14 @@
+.item{
+    position: relative;
+    background-color:cyan;
+    padding:20px;
+    margin:20px 35px;
+    width:600px;
+    font-size:large;
+}
+
+.cross{
+    position:absolute;
+    top:20px;
+    right:30px;
+}
