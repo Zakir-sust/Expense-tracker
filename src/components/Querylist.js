@@ -135,6 +135,8 @@ const Querylist = (props) => {
     const d=new Date('5555-10-10')
     localStorage.setItem('dt', d);
     const ath=use;
+    console.log('I JUST NEED TO CHECK THAT EXACTLY WHAT IS HAPPENING')
+    console.log(items)
     return (
         <div>
             <div className="optionmenu">
