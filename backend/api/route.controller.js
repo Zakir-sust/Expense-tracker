@@ -47,6 +47,7 @@ export default class RouteCtrl{
 
     ///must send id in request parameter
     static async apiDeleteItem(req,res){
+        console.log('deleteing id',req.query.id)
         ItemModel.deleteOne({_id:req.query.id},(err,data)=>{
             if(err)
             {
