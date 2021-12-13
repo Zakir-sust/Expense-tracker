@@ -17,7 +17,8 @@ Features:
 How to use:
 1) clone the repository
     - git clone
-2) install the dependencies.
+2) install the dependencies.All the required dependencies are included in the package.json .
+ Just run
     - npm install
 3) go to /backend and start the backend server
     - node start
