@@ -23,6 +23,6 @@ How to use:
     - node start
 4) from the root directory start the react app using
     - npm start
-![screenshot](https://github.com/Zakir-sust/Expense-tracker/blob/main/images/1.png =300x400)
+![screenshot](./https://github.com/Zakir-sust/Expense-tracker/blob/main/images/1.png =300x400)
 
 
