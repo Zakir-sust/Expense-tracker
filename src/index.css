@@ -31,6 +31,7 @@ a {
   margin:40px auto;
   width:300px;
   padding:30px;
+  border-radius:8px;
 }
 .form input{
   /* background-color:darkslategray; */
@@ -75,4 +76,15 @@ button:hover{
   color:rgb(118, 36, 185);
   font-size:larger;
   font-weight: 700;
+}
+
+.query-text{
+  background-color: rgb(246, 250, 250);
+  width:300px;
+  padding:30px;
+  font-size:larger;
+  position:relative;
+  top:260px;
+  left:100px;
+  border-radius:5px;
 }

@@ -6,6 +6,8 @@ const Queryform = () => {
     const [endDate, setEndDate] = useState('')
     const [product, setProduct] = useState('')
     return (
+      <div>
+        <p className = 'query-text'>You don't have to fill all the fields.Fill just the item field for a quick query!</p>
         <div className = 'form-wrapper'>
             <form className='form'>             
                 <input
@@ -38,6 +40,7 @@ const Queryform = () => {
                 ><button type='submit' value='submit'> Submit</button></Link>
         </form>
         </div>
+      </div>
     )
 }
 
