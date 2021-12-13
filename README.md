@@ -23,6 +23,11 @@ How to use:
     - node start
 4) from the root directory start the react app using
     - npm start
-<img src="/images/1.png" alt="drawing" width="200"/>
+Screenshots :
+In the starting page,You can signup or login.You can use the dummy user with populated db - username:foo,password:12345
+
+<img src="/images/1.png" alt="signup" width="400"/>
+<img src="/images/2.png" alt="signup" width="400"/>
+<img src="/images/3.png" alt="login" width="400"/>
 
 
