@@ -63,7 +63,7 @@ const Loginform = () => {
                    onChange={(e) => setPass(e.target.value)}
                 />
                 </div>  
-                <button type='submit' value='login'>Button</button>
+                <button type='submit' value='login'>Login</button>
             </form>
         </div>
     )
