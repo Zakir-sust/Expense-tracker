@@ -32,12 +32,18 @@ In the starting page,You can signup or login.You can use the dummy user with pop
 <img src="/images/2.png" alt="signup" width="900"/>
 <img src="/images/3.png" alt="login" width="900"/>
 
-- The homepage
+- The homepage.Click [Add New Record] for inserting a new record/expense info and red x for
+  deleting a record.
 <img src="/images/4.png" alt="login" width="900"/>
+- insert necessary info in the fields
 <img src="/images/5.png" alt="login" width="900"/>
 <img src="/images/6.png" alt="login" width="900"/>
+- Click the [Filter] in the navigation bar to query
 <img src="/images/7.png" alt="login" width="900"/>
+- Add custom date range and/or item name for querying
 <img src="/images/8.png" alt="login" width="900"/>
+- list genarated according to query!
 <img src="/images/9.png" alt="login" width="900"/>
+
 <img src="/images/10.png" alt="login" width="900"/>
 <img src="/images/12.png" alt="login" width="900"/>
