@@ -32,7 +32,3 @@ In the starting page,You can signup or login.You can use the dummy user with pop
 <img src="/images/2.png" alt="signup" width="600"/>
 <img src="/images/3.png" alt="login" width="600"/>    
 <img src="/images/4.png" alt="login" width="600"/>
-
-
-
-
