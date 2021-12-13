@@ -37,19 +37,19 @@ const Recordlist = ({useid}) => {
             let date = new Date(item.date)
             if(date.getMonth() === thisMonth)
             {
-                // console.log('cost added for date: ',item)
                 res+=item.cost;
             }
         }
         return res
     } 
+
     const d=new Date('5555-10-10')
     localStorage.setItem('dt', d);
     const ath=useid
     return (
         <div className = 'record-list'>
-            <p className = 'total-cost'> Cost for this month: {getOneMonth()} taka</p>
-            <p className = 'total-cost'> Cost for last 3 months is {allRes()} taka</p>
+            <p className = 'total-cost'> Expense for this month: {getOneMonth()} taka</p>
+            <p className = 'total-cost'> Expense for last 3 months is {allRes()} taka</p>
             <div>
                 
                 {

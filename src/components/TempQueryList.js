@@ -71,8 +71,8 @@ const TempQueryList = (props)=>{
     
     return (
         <div className = 'record-list'>
-            <p className = 'total-cost'>Cost for this month : {getOneMonth()}</p>
-            <p className = 'total-cost'>Total Cost : {allRes()} taka</p>
+            <p className = 'total-cost'>Expense for this month : {getOneMonth()}</p>
+            <p className = 'total-cost'>Total Expense : {allRes()} taka</p>
             <div  >
                 {
                    items.map(item => (
