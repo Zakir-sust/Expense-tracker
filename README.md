@@ -28,9 +28,16 @@ Screenshots :
 In the starting page,You can signup or login.You can use the dummy user with populated db - username:foo,password:12345 
 
 
-<img src="/images/1.png" alt="signup" width="800"/>  
-<img src="/images/2.png" alt="signup" width="800"/>
-<img src="/images/3.png" alt="login" width="800"/>
+<img src="/images/1.png" alt="signup" width="900"/>  
+<img src="/images/2.png" alt="signup" width="900"/>
+<img src="/images/3.png" alt="login" width="900"/>
 
 - The homepage
-<img src="/images/4.png" alt="login" width="800"/>
+<img src="/images/4.png" alt="login" width="900"/>
+<img src="/images/5.png" alt="login" width="900"/>
+<img src="/images/6.png" alt="login" width="900"/>
+<img src="/images/7.png" alt="login" width="900"/>
+<img src="/images/8.png" alt="login" width="900"/>
+<img src="/images/9.png" alt="login" width="900"/>
+<img src="/images/10.png" alt="login" width="900"/>
+<img src="/images/12.png" alt="login" width="900"/>
