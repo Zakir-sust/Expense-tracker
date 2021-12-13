@@ -46,6 +46,21 @@ const TempQueryList = (props)=>{
         }
         return allCost
     }
+
+    const getOneMonth = ()=>{
+        let today = new Date()
+        let thisMonth = today.getMonth()
+        let res = 0
+        for(let item of items){
+            let date = new Date(item.date)
+            if(date.getMonth() === thisMonth)
+            {
+                res+=item.cost;
+            }
+        }
+        return res
+    } 
+    
     useEffect(()=>{
         getItemArray().then(res=>{
             setItems(res)
@@ -56,6 +71,7 @@ const TempQueryList = (props)=>{
     
     return (
         <div className = 'record-list'>
+            <p className = 'total-cost'>Cost for this month : {getOneMonth()}</p>
             <p className = 'total-cost'>Total Cost : {allRes()} taka</p>
             <div  >
                 {

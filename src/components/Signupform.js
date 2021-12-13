@@ -90,15 +90,14 @@ const Signupform = () => {
                 ></input>
                 <input
 
-                  type='text'
+                  type='password'
                   placeholder='Enter Password'
                   value={password}
                   onChange={(e)=>setPass(e.target.value)}
 
                 ></input>
                 <input
-
-                  type='text'
+                  type='password'
                   placeholder='Repeat Password'
                   value={passwordr}
                   onChange={(e)=>setPassr(e.target.value)}
